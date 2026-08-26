@@ -102,8 +102,9 @@
         }
 
         #me {
+            display: block;
             border: 0 solid black;
-            margin-bottom: 50px;
+            margin: 0;
             border-radius: 10px;
         }
 
@@ -133,7 +134,11 @@
             display: flex;
             align-items: center;
             gap: 18px;
-            margin-top: 25px;
+            margin-top: 8px;
+        }
+
+        .profile-info p:last-of-type {
+            margin-bottom: 0;
         }
 
         .social-link {
@@ -358,7 +363,7 @@
                     <img src="home_files/WechatIMG5569.jpg" width="220px" style="border-radius: 10px;" id="me"
                         itemprop="photo" />
                 </td>
-                <td style="vertical-align: top;">
+                <td class="profile-info" style="vertical-align: top;">
                     <br />
                     <h1>
                         <span itemprop="name">Rong Li &nbsp;&nbsp; &nbsp;&nbsp; 李 蓉 &nbsp;
@@ -403,7 +408,6 @@
                             <img src="./home_files/contact-email.svg" alt="">
                         </a>
                     </div>
-                    <br />
                 </td>
             </tr>
         </table>
@@ -720,7 +724,7 @@
                 </a>
                 <div>
                     <div class="experience-heading"><strong class="experience-organization">BIGAI</strong><span
-                            class="experience-role">Intern Researcher</span></div>
+                            class="experience-role">Research Intern</span></div>
                     <div class="experience-mentor">Mentors: <a href="https://siyuanhuang.com/">Dr. Siyuan
                             Huang</a>, <a href="https://buzz-beater.github.io/">Dr. Baoxiong Jia</a></div>
                 </div>
