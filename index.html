@@ -128,6 +128,43 @@
             color: #2d92e9;
         }
 
+        /* 主页联系方式统一为品牌图标，保留清晰的点击区域与悬停反馈。 */
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        .social-link:hover {
+            background-color: #f0f5fa;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        .social-link img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .social-link-linkedin img {
+            filter: invert(31%) sepia(92%) saturate(1418%) hue-rotate(177deg) brightness(91%) contrast(101%);
+        }
+
+        .social-link-email img {
+            opacity: 0.72;
+        }
+
         /* 最上面的栏目 */
         .topbar {
             font-size: 20px;
@@ -197,6 +234,91 @@
             -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
             -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 经历区域使用“简化标记—经历内容—日期”的三列布局。 */
+        .experience-list {
+            /* 与 Publications 的 20px border-spacing 保持相同的内容区左右留白。 */
+            margin: 6px 20px 0;
+        }
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 72px minmax(0, 1fr) 150px;
+            align-items: center;
+            gap: 14px;
+            padding: 7px 0;
+        }
+
+        /* 仅露出官方横版 logo 中的图形标记，三家机构保持相近的视觉面积。 */
+        .experience-logo-frame {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 72px;
+            height: 52px;
+            overflow: hidden;
+        }
+
+        .experience-logo-frame img {
+            display: block;
+            max-width: none;
+            flex: none;
+        }
+
+        .experience-logo-frame-bigai {
+            width: 48px;
+        }
+
+        .experience-logo-frame-hkust {
+            width: 36px;
+        }
+
+        .experience-logo-bigai {
+            width: auto;
+            height: 52px;
+        }
+
+        .experience-logo-hkust {
+            width: auto;
+            height: 52px;
+        }
+
+        .experience-logo-inria {
+            width: auto;
+            height: 52px;
+            transform: translateX(-58px);
+        }
+
+        .experience-organization {
+            margin-right: 8px;
+            color: #222;
+            font-size: 16px;
+        }
+
+        .experience-heading {
+            margin-bottom: 3px;
+            line-height: 1.3;
+        }
+
+        .experience-role {
+            color: #444;
+        }
+
+        .experience-mentor {
+            color: #222;
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        .experience-date {
+            justify-self: end;
+            padding-right: 24px;
+            color: #222;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
         }
 
         @keyframes sparkle {
@@ -272,11 +394,26 @@
                     My current research focuses on 3D scene understanding and embodied AI.
                     <div style="height: 10px;"></div>
                     I am also grateful for the opportunity to work with a few amazing collaborators 😆.
-                    <div style="height: 25px;"></div>
-                    📚 <a href="https://scholar.google.com/citations?user=M68wBgkAAAAJ&hl=en">Google Scholar</a>
-                    | 💻 <a href="https://github.com/iris0329">GitHub</a> |
-                    💼 <a href="https://www.linkedin.com/in/rong-li-91b287181/">LinkedIn</a> |
-                    📧 <a href="mailto:rli335@connect.hkust-gz.edu.cn">Email</a>
+                    <div class="social-links">
+                        <a class="social-link"
+                            href="https://scholar.google.com/citations?user=M68wBgkAAAAJ&amp;hl=en" target="_blank"
+                            rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+                            <img src="./home_files/contact-google-scholar.svg" alt="">
+                        </a>
+                        <a class="social-link" href="https://github.com/iris0329" target="_blank" rel="noopener"
+                            aria-label="GitHub" title="GitHub">
+                            <img src="./home_files/contact-github.svg" alt="">
+                        </a>
+                        <a class="social-link social-link-linkedin"
+                            href="https://www.linkedin.com/in/rong-li-91b287181/" target="_blank" rel="noopener"
+                            aria-label="LinkedIn" title="LinkedIn">
+                            <img src="./home_files/contact-linkedin.svg" alt="">
+                        </a>
+                        <a class="social-link social-link-email" href="mailto:rli335@connect.hkust-gz.edu.cn"
+                            aria-label="Email" title="Email">
+                            <img src="./home_files/contact-email.svg" alt="">
+                        </a>
+                    </div>
                     </p>
                     <br />
                 </td>
@@ -587,15 +724,47 @@
 
     <div class="container" id="experience">
         <h2>Experience</h2>
-        <ul style="line-height: 1.8;">
-            <!-- <li>[2025.07 - present] Intern Researcher, BIGAI, Mentor: <a href="https://siyuanhuang.com/">Dr. Siyuan
-                    Huang</a>, <a href="https://buzz-beater.github.io/">Dr. Baoxiong
-                    Jia</a></li> -->
-            <li>[2022.11 - 2024.01] Research Assistant, HKUST(GZ), Mentor: <a href="https://junweiliang.me/">Prof.
-                    Junwei Liang</a></li>
-            <li>[2021.12 - 2022.07] Research Assistant, Inria Paris, Mentor: <a
-                    href="https://astra-team.github.io/team/">Dr. Raúl de Charette</a></li>
-        </ul>
+        <div class="experience-list">
+            <div class="experience-item">
+                <a class="experience-logo-frame experience-logo-frame-bigai" href="https://www.bigai.ai/"
+                    target="_blank" rel="noopener" aria-label="BIGAI website">
+                    <img class="experience-logo-bigai" src="./home_files/bigai-logo.png" alt="BIGAI mark">
+                </a>
+                <div>
+                    <div class="experience-heading"><strong class="experience-organization">BIGAI</strong><span
+                            class="experience-role">Intern Researcher</span></div>
+                    <div class="experience-mentor">Mentors: <a href="https://siyuanhuang.com/">Dr. Siyuan
+                            Huang</a> · <a href="https://buzz-beater.github.io/">Dr. Baoxiong Jia</a></div>
+                </div>
+                <time class="experience-date">2025.08 – 2026.08</time>
+            </div>
+            <div class="experience-item">
+                <a class="experience-logo-frame experience-logo-frame-hkust" href="https://www.hkust-gz.edu.cn/"
+                    target="_blank" rel="noopener" aria-label="HKUST(GZ) website">
+                    <img class="experience-logo-hkust" src="./home_files/hkust-gz-logo.png" alt="HKUST(GZ) mark">
+                </a>
+                <div>
+                    <div class="experience-heading"><strong class="experience-organization">HKUST(GZ)</strong><span
+                            class="experience-role">Research Assistant</span></div>
+                    <div class="experience-mentor">Mentor: <a href="https://junweiliang.me/">Prof. Junwei
+                            Liang</a></div>
+                </div>
+                <time class="experience-date">2022.11 – 2024.01</time>
+            </div>
+            <div class="experience-item">
+                <a class="experience-logo-frame" href="https://www.inria.fr/en" target="_blank" rel="noopener"
+                    aria-label="Inria website">
+                    <img class="experience-logo-inria" src="./home_files/inria-logo.svg" alt="Inria wordmark">
+                </a>
+                <div>
+                    <div class="experience-heading"><strong class="experience-organization">Inria Paris</strong><span
+                            class="experience-role">Research Assistant</span></div>
+                    <div class="experience-mentor">Mentor: <a href="https://astra-team.github.io/team/">Dr. Raúl de
+                            Charette</a></div>
+                </div>
+                <time class="experience-date">2021.12 – 2022.07</time>
+            </div>
+        </div>
     </div>
 
     <!-- For the use of github buttons -->
