@@ -223,13 +223,17 @@
         }
 
         /* 论文信息按标题、作者、会议和资源链接建立清晰层级。 */
+        #publications table td {
+            vertical-align: top !important;
+        }
+
         #publications table td:first-child {
-            width: 170px !important;
+            width: 150px !important;
         }
 
         #publications table td:first-child img {
-            width: 170px;
-            height: 128px;
+            width: 150px;
+            height: 113px;
             object-fit: cover;
         }
 
@@ -239,7 +243,11 @@
             line-height: 1.5 !important;
         }
 
-        #publications table td:nth-child(2)>strong:first-child {
+        .publication-entry {
+            display: block;
+        }
+
+        .publication-copy>strong:first-child {
             display: block;
             color: #111;
             font-size: 17px;
@@ -247,12 +255,12 @@
             margin-bottom: 5px;
         }
 
-        #publications table td:nth-child(2)>strong:first-child+br,
-        #publications table td:nth-child(2)>em+br {
+        .publication-copy>strong:first-child+br,
+        .publication-copy>em+br {
             display: none;
         }
 
-        #publications table td:nth-child(2)>em {
+        .publication-copy>em {
             display: inline-block;
             color: #555;
             margin-top: 4px;
@@ -523,6 +531,8 @@
                     <img src="./home_files/ascent.png" width="200px" height="150px" class="img-bordered" alt="photo">
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
+                    <div class="publication-entry">
+                    <div class="publication-copy">
                     <strong>Stairway to Success: Zero-Shot Floor-Aware Object-Goal Navigation via LLM-Driven
                         Coarse-to-Fine Exploration</strong>
                     <br />
@@ -532,6 +542,7 @@
                         Yiyi Ding, Leying Zhang, Junwei Liang.</font>
                     <br />
                     <em>IEEE Robotics and Automation Letters (RA-L), 2026</em>
+                    </div>
                     <div class="publication-links">
                         <a class="publication-link" href="https://arxiv.org/abs/2505.23019" target="_blank"
                             rel="noopener">Paper</a>
@@ -540,6 +551,7 @@
                         <a class="publication-link" href="https://zeying-gong.github.io/projects/ascent/"
                             target="_blank" rel="noopener">Project</a>
                     </div>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -547,6 +559,8 @@
                     <img src="./home_files/3eed.png" width="200px" height="150px" class="img-bordered" alt="photo">
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
+                    <div class="publication-entry">
+                    <div class="publication-copy">
                     <strong>3EED: Ground Everything Everywhere in 3D</strong>
                     <br />
                     <font color="grey"><strong>
@@ -555,6 +569,7 @@
                         Pan, Lingdong Kong, Junwei Liang, Ziwei Liu</font>
                     <br />
                     <em>Advances in Neural Information Processing Systems (NeurIPS), 2025</em>
+                    </div>
                     <div class="publication-links">
                         <a class="publication-link" href="https://arxiv.org/abs/2511.01755" target="_blank"
                             rel="noopener">Paper</a>
@@ -562,6 +577,7 @@
                             rel="noopener">Code</a>
                         <a class="publication-link" href="https://project-3eed.github.io" target="_blank"
                             rel="noopener">Project</a>
+                    </div>
                     </div>
                 </td>
             </tr>
@@ -571,6 +587,8 @@
                         alt="photo">
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
+                    <div class="publication-entry">
+                    <div class="publication-copy">
                     <strong>Talk2Event: Grounded Understanding of Dynamic Scenes from Event Cameras</strong>
                     <br />
                     <font color="grey">Lingdong Kong*, Dongyue Lu*, Ao Liang*, <strong>
@@ -580,6 +598,7 @@
                     <br />
                     <em>Advances in Neural Information Processing Systems (NeurIPS), 2025, </em>
                     <span style="color: #ffa500; font-weight: bold;">Spotlight (3.2%)</span>
+                    </div>
                     <div class="publication-links">
                         <a class="publication-link" href="https://arxiv.org/abs/2507.17664" target="_blank"
                             rel="noopener">Paper</a>
@@ -587,6 +606,7 @@
                             rel="noopener">Code</a>
                         <a class="publication-link" href="https://talk2event.github.io" target="_blank"
                             rel="noopener">Project</a>
+                    </div>
                     </div>
                 </td>
             </tr>
@@ -596,6 +616,8 @@
                     <img src="./home_files/iccv2025.jpg" width="200px" height="150px" class="img-bordered" alt="photo">
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
+                    <div class="publication-entry">
+                    <div class="publication-copy">
                     <strong>
                         Global-Aware Monocular Semantic Scene Completion with State Space Models
                     </strong>
@@ -610,11 +632,13 @@
                     <br>
                     <em> International Conference on Computer Vision (ICCV), 2025
                     </em>
+                    </div>
                     <div class="publication-links">
                         <a class="publication-link" href="https://arxiv.org/abs/2503.06569" target="_blank"
                             rel="noopener">Paper</a>
                         <a class="publication-link" href="https://github.com/sj-li/GA-MonoSSC" target="_blank"
                             rel="noopener">Code</a>
+                    </div>
                     </div>
                 </td>
             </tr>
@@ -625,6 +649,8 @@
                         alt="photo">
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
+                    <div class="publication-entry">
+                    <div class="publication-copy">
                     <strong>
                         SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding
                     </strong>
@@ -637,6 +663,7 @@
                     <br>
                     <em> Computer Vision and Pattern Recognition (CVPR), 2025
                     </em>
+                    </div>
                     <div class="publication-links">
                         <a class="publication-link" href="https://arxiv.org/abs/2412.04383" target="_blank"
                             rel="noopener">Paper</a>
@@ -651,6 +678,7 @@
                         <a class="publication-link" href="https://www.bilibili.com/video/BV1eQKdz2ELr?t=1.8"
                             target="_blank" rel="noopener">3D视觉工坊</a>
                     </div>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -659,6 +687,8 @@
                         alt="photo">
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
+                    <div class="publication-entry">
+                    <div class="publication-copy">
                     <strong>
                         TFNet: Exploiting Temporal Cues for Fast and Accurate LiDAR Semantic Segmentation
                     </strong>
@@ -673,9 +703,11 @@
                     </em>
                     <br />
 
+                    </div>
                     <div class="publication-links">
                         <a class="publication-link" href="https://arxiv.org/abs/2309.07849" target="_blank"
                             rel="noopener">Paper</a>
+                    </div>
                     </div>
                 </td>
             </tr>
@@ -685,6 +717,8 @@
                         alt="photo">
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
+                    <div class="publication-entry">
+                    <div class="publication-copy">
                     <strong>
                         An Examination of the Compositionality of Large Generative Vision-Language Models
                     </strong>
@@ -699,6 +733,7 @@
                         2024
                     </em>
                     <br />
+                    </div>
                     <div class="publication-links">
                         <a class="publication-link" href="https://arxiv.org/abs/2308.10509" target="_blank"
                             rel="noopener">Paper</a>
@@ -706,6 +741,7 @@
                             rel="noopener">Code</a>
                         <a class="publication-link" href="https://teleema.github.io/projects/SADE/sade.html"
                             target="_blank" rel="noopener">Project</a>
+                    </div>
                     </div>
                 </td>
             </tr>
@@ -715,6 +751,8 @@
                         alt="photo">
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
+                    <div class="publication-entry">
+                    <div class="publication-copy">
                     <strong>
                         Class-Prototypes for Contrastive Learning in Weakly-Supervised 3D Point Cloud Segmentation
                     </strong>
@@ -728,6 +766,7 @@
                     </em>
                     <br />
 
+                    </div>
                     <div class="publication-links">
                         <a class="publication-link"
                             href="publication_files/BMVC -  Class-Prototypes for Contrastive Learning in Weakly-Supervised 3D Point Cloud.pdf"
@@ -739,6 +778,7 @@
                         <a class="publication-link" href="publication_files/COARSE3D slide.pdf" target="_blank"
                             rel="noopener">Slides</a>
                     </div>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -746,6 +786,8 @@
                     <img src="./home_files/pmf.png" width="200px" height="150px" class="img-bordered" alt="photo">
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
+                    <div class="publication-entry">
+                    <div class="publication-copy">
                     <strong>
                         Perception-Aware Multi-Sensor Fusion for 3D LiDAR Semantic Segmentation
                     </strong>
@@ -758,6 +800,7 @@
                     <br>
                     <em>International Conference on Computer Vision (ICCV), 2021</em>
                     <br>
+                    </div>
                     <div class="publication-links">
                         <a class="publication-link" href="https://arxiv.org/abs/2106.15277" target="_blank"
                             rel="noopener">Paper</a>
@@ -765,6 +808,7 @@
                             rel="noopener">Code</a>
                         <a class="publication-link" href="./publication_files/PMF - report - by - Rong.pdf"
                             target="_blank" rel="noopener">Slides</a>
+                    </div>
                     </div>
                 </td>
             </tr>
