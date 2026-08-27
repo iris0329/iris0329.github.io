@@ -222,6 +222,66 @@
             vertical-align: center;
         }
 
+        /* 论文信息按标题、作者、会议和资源链接建立清晰层级。 */
+        #publications table td:first-child {
+            width: 170px !important;
+        }
+
+        #publications table td:first-child img {
+            width: 170px;
+            height: 128px;
+            object-fit: cover;
+        }
+
+        #publications table td:nth-child(2) {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5 !important;
+        }
+
+        #publications table td:nth-child(2)>strong:first-child {
+            display: block;
+            color: #111;
+            font-size: 17px;
+            line-height: 1.35;
+            margin-bottom: 5px;
+        }
+
+        #publications table td:nth-child(2)>strong:first-child+br,
+        #publications table td:nth-child(2)>em+br {
+            display: none;
+        }
+
+        #publications table td:nth-child(2)>em {
+            display: inline-block;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        .publication-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .publication-link {
+            display: inline-block;
+            padding: 2px 8px;
+            border: 1px solid #c9e1f7;
+            border-radius: 5px;
+            background-color: #f4f9fe;
+            color: #2d92e9;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .publication-link:hover {
+            background-color: #eaf4fd;
+            text-decoration: none;
+        }
+
         .publication p {
             height: 100px;
             padding-top: 5px;
@@ -472,14 +532,13 @@
                         Yiyi Ding, Leying Zhang, Junwei Liang.</font>
                     <br />
                     <em>IEEE Robotics and Automation Letters (RA-L), 2026</em>
-                    <div>
-                        [<a href="https://arxiv.org/abs/2505.23019" target="_blank" rel="noopener">paper</a>]
-                        &nbsp&nbsp
-                        [<a href="https://github.com/Zeying-Gong/ascent" target="_blank" rel="noopener">code</a>]
-                        &nbsp&nbsp
-                        [<a href="https://zeying-gong.github.io/projects/ascent/" target="_blank" rel="noopener">project
-                            page</a>]
-                        &nbsp&nbsp
+                    <div class="publication-links">
+                        <a class="publication-link" href="https://arxiv.org/abs/2505.23019" target="_blank"
+                            rel="noopener">Paper</a>
+                        <a class="publication-link" href="https://github.com/Zeying-Gong/ascent" target="_blank"
+                            rel="noopener">Code</a>
+                        <a class="publication-link" href="https://zeying-gong.github.io/projects/ascent/"
+                            target="_blank" rel="noopener">Project</a>
                     </div>
                 </td>
             </tr>
@@ -496,14 +555,13 @@
                         Pan, Lingdong Kong, Junwei Liang, Ziwei Liu</font>
                     <br />
                     <em>Advances in Neural Information Processing Systems (NeurIPS), 2025</em>
-                    <div>
-                        [<a href="" target="_blank" rel="noopener">paper</a>]
-                        &nbsp&nbsp
-                        [<a href="" target="_blank" rel="noopener">code</a>]
-                        &nbsp&nbsp
-                        [<a href="https://project-3eed.github.io" target="_blank" rel="noopener">project
-                            page</a>]
-                        &nbsp&nbsp
+                    <div class="publication-links">
+                        <a class="publication-link" href="https://arxiv.org/abs/2511.01755" target="_blank"
+                            rel="noopener">Paper</a>
+                        <a class="publication-link" href="https://github.com/worldbench/3EED" target="_blank"
+                            rel="noopener">Code</a>
+                        <a class="publication-link" href="https://project-3eed.github.io" target="_blank"
+                            rel="noopener">Project</a>
                     </div>
                 </td>
             </tr>
@@ -522,14 +580,13 @@
                     <br />
                     <em>Advances in Neural Information Processing Systems (NeurIPS), 2025, </em>
                     <span style="color: #ffa500; font-weight: bold;">Spotlight (3.2%)</span>
-                    <div>
-                        [<a href="" target="_blank" rel="noopener">paper</a>]
-                        &nbsp&nbsp
-                        [<a href="" target="_blank" rel="noopener">code</a>]
-                        &nbsp&nbsp
-                        [<a href="https://talk2event.github.io" target="_blank" rel="noopener">project
-                            page</a>]
-                        &nbsp&nbsp
+                    <div class="publication-links">
+                        <a class="publication-link" href="https://arxiv.org/abs/2507.17664" target="_blank"
+                            rel="noopener">Paper</a>
+                        <a class="publication-link" href="https://github.com/worldbench/Talk2Event" target="_blank"
+                            rel="noopener">Code</a>
+                        <a class="publication-link" href="https://talk2event.github.io" target="_blank"
+                            rel="noopener">Project</a>
                     </div>
                 </td>
             </tr>
@@ -553,11 +610,11 @@
                     <br>
                     <em> International Conference on Computer Vision (ICCV), 2025
                     </em>
-                    <div>
-                        [<a href="https://arxiv.org/abs/2503.06569" target="_blank" rel="noopener">paper</a>]
-                        &nbsp&nbsp
-                        [<a href="https://github.com/sj-li/GA-MonoSSC" target="_blank" rel="noopener">code</a>]
-                        &nbsp&nbsp
+                    <div class="publication-links">
+                        <a class="publication-link" href="https://arxiv.org/abs/2503.06569" target="_blank"
+                            rel="noopener">Paper</a>
+                        <a class="publication-link" href="https://github.com/sj-li/GA-MonoSSC" target="_blank"
+                            rel="noopener">Code</a>
                     </div>
                 </td>
             </tr>
@@ -580,22 +637,19 @@
                     <br>
                     <em> Computer Vision and Pattern Recognition (CVPR), 2025
                     </em>
-                    <div>
-                        [<a href="https://arxiv.org/abs/2412.04383" target="_blank" rel="noopener">paper</a>]
-                        &nbsp&nbsp
-                        [<a href="https://github.com/iris0329/SeeGround" target="_blank" rel="noopener">code</a>]
-                        &nbsp&nbsp
-                        [<a href="https://seeground.github.io/" target="_blank" rel="noopener">project
-                            page</a>]
-                        &nbsp&nbsp
-                        [<a href="https://mp.weixin.qq.com/s/LakS8zqiA5XunmEQykKCDw" target="_blank"
-                            rel="noopener">机器之心</a>]
-                        &nbsp&nbsp
-                        [<a href="https://mp.weixin.qq.com/s/gYiUegdU_Fhbltgrj6W3Ug" target="_blank" rel="noopener">智猩猩
-                            Auto</a>]
-                        &nbsp&nbsp
-                        [<a href="https://www.bilibili.com/video/BV1eQKdz2ELr?t=1.8" target="_blank"
-                            rel="noopener">3D视觉工坊</a>]
+                    <div class="publication-links">
+                        <a class="publication-link" href="https://arxiv.org/abs/2412.04383" target="_blank"
+                            rel="noopener">Paper</a>
+                        <a class="publication-link" href="https://github.com/iris0329/SeeGround" target="_blank"
+                            rel="noopener">Code</a>
+                        <a class="publication-link" href="https://seeground.github.io/" target="_blank"
+                            rel="noopener">Project</a>
+                        <a class="publication-link" href="https://mp.weixin.qq.com/s/LakS8zqiA5XunmEQykKCDw"
+                            target="_blank" rel="noopener">机器之心</a>
+                        <a class="publication-link" href="https://mp.weixin.qq.com/s/gYiUegdU_Fhbltgrj6W3Ug"
+                            target="_blank" rel="noopener">智猩猩 Auto</a>
+                        <a class="publication-link" href="https://www.bilibili.com/video/BV1eQKdz2ELr?t=1.8"
+                            target="_blank" rel="noopener">3D视觉工坊</a>
                     </div>
                 </td>
             </tr>
@@ -619,8 +673,9 @@
                     </em>
                     <br />
 
-                    <div>
-                        [<a href="https://arxiv.org/abs/2309.07849" target="_blank" rel="noopener">paper</a>]
+                    <div class="publication-links">
+                        <a class="publication-link" href="https://arxiv.org/abs/2309.07849" target="_blank"
+                            rel="noopener">Paper</a>
                     </div>
                 </td>
             </tr>
@@ -644,14 +699,13 @@
                         2024
                     </em>
                     <br />
-                    <div>
-                        [<a href="https://arxiv.org/abs/2308.10509" target="_blank" rel="noopener">paper</a>]
-                        &nbsp&nbsp
-                        [<a href="https://github.com/TeleeMa/SADE" target="_blank" rel="noopener">code</a>]
-                        &nbsp&nbsp
-                        [<a href="https://teleema.github.io/projects/SADE/sade.html" target="_blank"
-                            rel="noopener">project
-                            page</a>]
+                    <div class="publication-links">
+                        <a class="publication-link" href="https://arxiv.org/abs/2308.10509" target="_blank"
+                            rel="noopener">Paper</a>
+                        <a class="publication-link" href="https://github.com/TeleeMa/SADE" target="_blank"
+                            rel="noopener">Code</a>
+                        <a class="publication-link" href="https://teleema.github.io/projects/SADE/sade.html"
+                            target="_blank" rel="noopener">Project</a>
                     </div>
                 </td>
             </tr>
@@ -674,15 +728,16 @@
                     </em>
                     <br />
 
-                    <div>
-                        [<a href="publication_files/BMVC -  Class-Prototypes for Contrastive Learning in Weakly-Supervised 3D Point Cloud.pdf"
-                            target="_blank" rel="noopener">paper</a>]
-                        &nbsp&nbsp
-                        [<a href="https://github.com/cv-rits/COARSE3D" target="_blank" rel="noopener">code</a>]
-                        &nbsp&nbsp
-                        [<a href="publication_files/COARSE3D - poster.pdf" target="_blank" rel="noopener">poster</a>]
-                        &nbsp&nbsp
-                        [<a href="publication_files/COARSE3D slide.pdf" target="_blank" rel="noopener">slides</a>]
+                    <div class="publication-links">
+                        <a class="publication-link"
+                            href="publication_files/BMVC -  Class-Prototypes for Contrastive Learning in Weakly-Supervised 3D Point Cloud.pdf"
+                            target="_blank" rel="noopener">Paper</a>
+                        <a class="publication-link" href="https://github.com/cv-rits/COARSE3D" target="_blank"
+                            rel="noopener">Code</a>
+                        <a class="publication-link" href="publication_files/COARSE3D - poster.pdf" target="_blank"
+                            rel="noopener">Poster</a>
+                        <a class="publication-link" href="publication_files/COARSE3D slide.pdf" target="_blank"
+                            rel="noopener">Slides</a>
                     </div>
                 </td>
             </tr>
@@ -703,13 +758,13 @@
                     <br>
                     <em>International Conference on Computer Vision (ICCV), 2021</em>
                     <br>
-                    <div>
-                        [<a href="https://arxiv.org/abs/2106.15277" target="_blank" rel="noopener">paper</a>]
-                        &nbsp&nbsp
-                        [<a href="https://github.com/ICEORY/PMF" target="_blank" rel="noopener">code</a>]
-                        &nbsp&nbsp
-                        [<a href="./publication_files/PMF - report - by - Rong.pdf" target="_blank"
-                            rel="noopener">slides</a>]
+                    <div class="publication-links">
+                        <a class="publication-link" href="https://arxiv.org/abs/2106.15277" target="_blank"
+                            rel="noopener">Paper</a>
+                        <a class="publication-link" href="https://github.com/ICEORY/PMF" target="_blank"
+                            rel="noopener">Code</a>
+                        <a class="publication-link" href="./publication_files/PMF - report - by - Rong.pdf"
+                            target="_blank" rel="noopener">Slides</a>
                     </div>
                 </td>
             </tr>
@@ -766,7 +821,7 @@
 
     <!-- Last modified time -->
     <div style="text-align: center; margin-top: 20px;">
-        <em>Last modified: 2025-09-19
+        <em>Last modified: 2026-08-27
         </em>
     </div>
 </body>
