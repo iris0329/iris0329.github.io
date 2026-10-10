@@ -296,6 +296,22 @@
             object-fit: cover;
         }
 
+        /* GeoReader 缩略图放大后裁掉右侧方法图，让场景在卡片中占满画面。 */
+        .georeader-crop {
+            display: block;
+            width: 150px;
+            height: 113px;
+            overflow: hidden;
+        }
+
+        #publications table td:first-child .georeader-crop img {
+            display: block;
+            width: 450px;
+            height: 234px;
+            max-width: none;
+            transform: translateY(-52px);
+        }
+
         #publications table td:nth-child(2) {
             color: #555;
             font-size: 14px;
@@ -616,8 +632,8 @@
         <table style="width: 100%; border-spacing: 20px;">
             <tr>
                 <td style="width: 200px; vertical-align: top;">
-                    <img src="./home_files/georeader.webp" width="200px" height="150px" class="img-bordered"
-                        alt="GeoReader method overview" style="object-fit: contain;">
+                    <span class="georeader-crop img-bordered"><img src="./home_files/georeader.webp"
+                            alt="GeoReader teaser showing a spatial reasoning scene"></span>
                 </td>
                 <td style="vertical-align: top;line-height:1.8;">
                     <div class="publication-entry">
