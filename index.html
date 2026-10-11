@@ -3,6 +3,7 @@
 <head>
     <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- analysis -->
     <script>
@@ -513,6 +514,95 @@
             white-space: nowrap;
         }
 
+        /* 窄屏改为单列，让论文链接及 star 数完整留在可视区域内。 */
+        @media screen and (max-width: 640px) {
+            body {
+                margin: 0;
+            }
+
+            .container {
+                box-sizing: border-box;
+                width: calc(100% - 16px);
+                margin: 8px auto;
+                padding: 16px;
+            }
+
+            .topbar {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+                font-size: 14px;
+            }
+
+            .topbar a {
+                padding: 5px 6px;
+            }
+
+            .profile-container > table,
+            .profile-container tbody,
+            .profile-container tr,
+            .profile-container td {
+                display: block;
+                box-sizing: border-box;
+                width: 100% !important;
+            }
+
+            .profile-container td:first-child {
+                padding: 0 !important;
+            }
+
+            #me {
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            #publications table,
+            #publications tbody {
+                display: block;
+                width: 100% !important;
+                border-spacing: 0 !important;
+            }
+
+            #publications tr {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 16px 0;
+                border-bottom: 1px solid #e8eef4;
+            }
+
+            #publications table td,
+            #publications table td:first-child {
+                display: block;
+                box-sizing: border-box;
+                width: 100% !important;
+            }
+
+            #publications .publication-links {
+                gap: 8px;
+            }
+
+            .experience-list {
+                margin: 6px 0 0;
+            }
+
+            .experience-item {
+                grid-template-columns: 48px minmax(0, 1fr);
+                gap: 8px 12px;
+            }
+
+            .experience-logo-frame {
+                width: 40px;
+            }
+
+            .experience-date {
+                grid-column: 2;
+                justify-self: start;
+                padding-right: 0;
+            }
+        }
+
         @keyframes sparkle {
 
             0%,
@@ -540,7 +630,7 @@
         </nav>
     </div>
 
-    <div class="container">
+    <div class="container profile-container">
         <table style="width: 100%; border-spacing: 0;">
             <tr>
                 <td
